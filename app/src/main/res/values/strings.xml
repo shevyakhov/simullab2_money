@@ -1,0 +1,13 @@
+<resources>
+	<string name="app_name">simullab2_money</string>
+	<string name="start">Start</string>
+	<string name="stop">Stop</string>
+	<string name="startingRate">starting rate</string>
+	<string name="days">days</string>
+	<string name="startingRateRub">starting Rate ₽</string>
+	<string name="startingRateUsd">starting Rate $</string>
+	<string name="redo">new</string>
+	<string name="rubdiff">rub coef </string>
+	<string name="usddiff">usd coef</string>
+	<string name="howfast">how fast (ms)</string>
+</resources>
