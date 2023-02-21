@@ -22,20 +22,19 @@ import java.util.Random
 
 class MainActivity : AppCompatActivity() {
 
-	var howfast = 0L
-	var rubCoef = 0.0f
-	var usdCoef = 0.0f
-	var isStarted = false
-	var c = 0.0
-	var job: Job = Job()
-	val random = Random()
-	lateinit var chart: LineChart
-	lateinit var binding: ActivityMainBinding
+	private var howfast = 0L
+	private var rubCoef = 0.0f
+	private var usdCoef = 0.0f
+	private var isStarted = false
+	private var job: Job = Job()
+	private val random = Random()
+	private lateinit var chart: LineChart
+	private lateinit var binding: ActivityMainBinding
 
-	var xr = 0.0f
-	var yr = 0.0f
-	var xu = 0.0f
-	var yu = 0.0f
+	private var xr = 0.0f
+	private var yr = 0.0f
+	private var xu = 0.0f
+	private var yu = 0.0f
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		binding = ActivityMainBinding.inflate(layoutInflater)
