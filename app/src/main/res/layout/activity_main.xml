@@ -7,17 +7,11 @@
 	tools:context=".MainActivity">
 
 	<com.github.mikephil.charting.charts.LineChart
-		android:id="@+id/chart1"
+		android:id="@+id/chart"
 		android:layout_width="match_parent"
 		android:layout_height="500dp"
 		app:layout_constraintTop_toTopOf="parent" />
 
-	<com.yabu.livechart.view.LiveChart
-		android:id="@+id/chart"
-		android:layout_width="match_parent"
-		android:layout_height="450dp"
-		android:visibility="invisible"
-		app:layout_constraintTop_toTopOf="parent" />
 
 	<LinearLayout
 		android:layout_width="match_parent"

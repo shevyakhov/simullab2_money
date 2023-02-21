@@ -9,7 +9,6 @@ import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
-import com.yabu.livechart.view.LiveChart
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -30,8 +29,7 @@ class MainActivity : AppCompatActivity() {
 	var c = 0.0
 	var job: Job = Job()
 	val random = Random()
-	lateinit var chart: LiveChart
-	lateinit var chart1: LineChart
+	lateinit var chart: LineChart
 	lateinit var binding: ActivityMainBinding
 
 	var xr = 0.0f
@@ -41,13 +39,12 @@ class MainActivity : AppCompatActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		binding = ActivityMainBinding.inflate(layoutInflater)
-		chart1 = binding.chart1
 		chart = binding.chart
 		setContentView(binding.root)
 
 		var xAxis: XAxis
 		run {
-			xAxis = binding.chart1.xAxis
+			xAxis = binding.chart.xAxis
 			xAxis.mAxisMinimum = 0f
 			xAxis.enableGridDashedLine(10f, 10f, 0f)
 		}
@@ -107,7 +104,7 @@ class MainActivity : AppCompatActivity() {
 			}
 
 
-			binding.chart1.data = LineData(listOf(rubDataset1, usdDataset1))
+			binding.chart.data = LineData(listOf(rubDataset1, usdDataset1))
 
 
 
@@ -117,7 +114,7 @@ class MainActivity : AppCompatActivity() {
 					if (isStarted && isActive) {
 						delay(howfast)
 						withContext(Dispatchers.Main) {
-							chart1.nextRate(i.toFloat())
+							chart.nextRate(i.toFloat())
 						}
 						i++
 					}
